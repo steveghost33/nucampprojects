@@ -31,9 +31,8 @@ function RenderComments({comments}) {
                             <div key={comments.id}>
                                 <p>{comments.text}</p>
                                 <p>
-                                    {comments.author}
-                                    {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new 
-                                        Date(Date.parse(comments.date)))}
+                                    {comments.text}<br />
+                                    -- {comments.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comments.date)))}
                                 </p>
                                     </div>
                                 );
